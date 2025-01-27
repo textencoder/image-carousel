@@ -64,7 +64,9 @@ rightArrow.addEventListener("click", () => {
 
 navDots.forEach((dot) => {
   dot.addEventListener("click", () => {
-    img.src = "./images/" + imageUrls[dot.dataset.label];
-    console.log(dot.dataset.label);
+    i = dot.dataset.label;
+    img.src = "./images/" + imageUrls[i];
+    navDots.forEach((dot) => (dot.style.fill = "grey"));
+    navDots[i].style.fill = "black";
   });
 });
