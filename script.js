@@ -25,7 +25,7 @@ function cycleSlideshow() {
         if (i == 5) {
           i = 0;
         }
-        img.src = "/images/" + imageUrls[i];
+        img.src = "./images/" + imageUrls[i];
         navDots.forEach((dot) => (dot.style.fill = "grey"));
         //navDots[i-1].style.fill = 'grey';
         navDots[i].style.fill = "black";
@@ -37,7 +37,7 @@ function cycleSlideshow() {
 
 cycleSlideshow();
 
-img.src = "/images/" + imageUrls[i];
+img.src = "./images/" + imageUrls[i];
 navDots[i].style.fill = "black";
 
 leftArrow.addEventListener("click", () => {
@@ -46,7 +46,7 @@ leftArrow.addEventListener("click", () => {
   }
   i--;
   //j = 0;
-  img.src = "/images/" + imageUrls[i];
+  img.src = "./images/" + imageUrls[i];
   navDots.forEach((dot) => (dot.style.fill = "grey"));
   navDots[i].style.fill = "black";
 });
@@ -57,7 +57,7 @@ rightArrow.addEventListener("click", () => {
   }
   i++;
   //j = 0;
-  img.src = "/images/" + imageUrls[i];
+  img.src = "./images/" + imageUrls[i];
   navDots.forEach((dot) => (dot.style.fill = "grey"));
   navDots[i].style.fill = "black";
 });
@@ -65,7 +65,7 @@ rightArrow.addEventListener("click", () => {
 navDots.forEach((dot) => {
   dot.addEventListener("click", () => {
     i = dot.dataset.label;
-    img.src = "/images/" + imageUrls[i];
+    img.src = "./images/" + imageUrls[i];
     navDots.forEach((dot) => (dot.style.fill = "grey"));
     navDots[i].style.fill = "black";
   });
